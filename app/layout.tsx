@@ -4,6 +4,7 @@ import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { createClient } from "@/utils/supabase/server";
 import "./globals.css";
+import { icons } from "lucide-react";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -12,6 +13,38 @@ const defaultUrl = process.env.VERCEL_URL
 export const metadata = {
   metadataBase: new URL(defaultUrl),
   title: "Twitter Clone",
+  icons: {
+    icon: "/vercel.svg",
+    shortcut: "/vercel.svg",
+    apple: "/vercel.svg",
+    other: {
+      rel: "apple-touch-icon",
+      url: "/favicon.ico",
+    },
+  },
+  openGraph: {
+    title: "Twitter Clone",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Twitter Clone",
+  },
+  alternates: {
+    canonical: defaultUrl,
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: "no",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    maxSnippet: -1,
+    maxImagePreview: "large",
+    maxVideoPreview: -1,
+  },
   description: "Twitter Clone",
 };
 
