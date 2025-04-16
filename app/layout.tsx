@@ -54,9 +54,8 @@ export default async function RootLayout({
               ) : (
                 <></>
               )}
-              <div className="flex flex-col gap-20 max-w-5xl p-5">
-                {children}
-              </div>
+
+              {children}
 
               <footer className="w-full flex items-center justify-center mx-auto text-center text-xs gap-2 py-16">
                 <p>{new Date().getFullYear()} &copy; Twitter Clone</p>
